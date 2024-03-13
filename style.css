@@ -28,16 +28,35 @@
     text-align: center;
 }
 
+.contai{
+    width: 100%;
+    height: 5%;
+    align-items: center;
+    text-align: center;
+}
+.container-fluid{
+    max-width: 100%;
+    display: flex;
+}
+.container-group{
+    display: inline-block;
+}
+
 .container {
     display: block;
 }
 
-.ul {
-    size: 2%;
+.site-nav .site-nav-icon{
+    float: left;
+    display: flex;
 }
 
+.site-nav-icon a i {
+    padding: 8px 12px;
+}
 .dropdown{
     position: relative;
+    float: right;
     display: flex;
     text-align: center
 }
@@ -48,15 +67,29 @@
     text-align: center
 }
 
-.dropdown img{
-    margin: 24px;
-    width: 24px;
-    height: 24px;
+.site-nav-dropdown{
+    align-items: center;
+    display: flex;
 }
 
-#nav{
-    margin-top: 24px;
+.dropdown-eur-pp p{
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px;
 }
+
+.dropdown-img{
+    display: flex;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.dropdown-img img{
+    width: 100%;
+    width: 28px;
+    height: 28px;
+}
+
 
 .women{
     margin-top: 4%;
@@ -282,9 +315,7 @@
     font-size: 18px;
     border: 2px solid black;
 }
-#nav{
-    margin-bottom: 3%;
-}
+
 
 .footer{
     margin-left: 3%;
@@ -327,10 +358,17 @@
     text-align: center;
 }
 
+.col-4 .img img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+
 /* mobile: width <740px */
-@media only screen and (max-width: 740px){
+@media only screen and (max-width: 765px){
     .header{
-        height: 5%;
+        height: 2%;
     }
     .nav-bar{
         display: block;
@@ -338,15 +376,45 @@
     #nav-bar{
         display: none;
     }
-    .header-con{
-        display: none;
+    .navbar-nav .nav-item  {
+        display: flex;
+        flex-wrap: nowrap;
     }
+    .navbar-nav{
+        display: block;
+    }
+    .contai3{
+        float: right;
+     }
     
+     .eur_thanh{
+        display: none;
+     }
+
+     .site-nav .site-nav-icon .nav-icon1{
+        display: none;
+     }
+     .eur_p{
+        display: none;
+     }
+     .container-fluid{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+     
 }
 
 /* mobile: width <740px */
-@media only screen and (min-width: 740px) and(max-width: 1024px){
+@media only screen and (min-width: 740px) and(max-width: 1452px){
     .nav-bar{
         display: block;
+    }
+
+    .contai3{
+        width: 100%;
+    }
+    .container-fluid{
+        display: flex;
     }
 }
