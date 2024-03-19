@@ -1,0 +1,13 @@
+/* fonts */
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+/* colors */
+.text-custom-gray {
+    color: #1c1d1d;
+}
