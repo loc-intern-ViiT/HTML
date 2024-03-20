@@ -31,6 +31,12 @@
 .mt-45{
     margin-top: 45px;
 }
+.ml-40{
+    margin-left: 40px;
+}
+.mx-85{
+    margin: 0px 85px;
+}
 
 .px-40{
     padding: 0px 40px;
@@ -40,6 +46,9 @@
 }
 .px-20pt{
     padding: 0px 20%;
+}
+.pr-40{
+    padding: 0px 40px 0px 0px;
 }
 
 .p-5-15{
@@ -203,7 +212,7 @@ header .header-top h5 {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 2px;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.1); /* Sử dụng màu đen với độ mờ 0.5 */
 }
 .overlay2 {
@@ -290,11 +299,11 @@ header .header-top h5 {
 .product-wrapper {
     overflow-x: auto;
     display: flex;
-
 }
 
 .product-card {
     box-sizing: border-box;
+    min-width: 125px;
 }
 
 .follow-intagram .container-fluid{
@@ -308,6 +317,7 @@ header .header-top h5 {
     gap: 22px;
 }
 
+
 .card-text-shop{
     font-size: 17.6px;
     font-weight: 350;
@@ -319,6 +329,54 @@ header .header-top h5 {
     height: auto;
 }
 
+
+
+/* highlight */
+
+.hight{
+    width: 100%;
+    height: 566px;
+    overflow: hidden;
+}
+
+/* 
+
+
+.box-img1{
+    z-index: 1;
+}
+.box-img1 img{
+}
+.box-img2{
+    z-index: 0;
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+} */
+
+.image-highlight{
+    width: 100%;
+    max-width: 700px;
+}
+.box-img1, .box-img2{
+    width: 50%;
+}
+.box-img1{
+    padding-top: 10%;
+    padding-left: 15%;
+}
+
+
+.hight a{
+    font-size: 12px;
+    padding: 8px 14px;
+    letter-spacing: 3.5px;
+    border-radius: 0;
+    border: 1px solid rgb(194, 190, 190);
+}
+.hight a:hover{
+    border: 1px solid rgb(0, 0, 0);
+}
 .highlight .text h2{
     font-size: 30px;
     font-weight: 370;
@@ -328,49 +386,81 @@ header .header-top h5 {
     font-weight: 700;
     font-style: oblique;
 }
-.hight {
-    width: 100%;
-    margin: 0 6%;
-}
 
-.image-highlight{
-    width: 47%;
-}
-.text-highlight{
-    width: 47%;
-}
-
-.boot button{
+/* boot */
+.boot a{
     font-size: 12px;
     padding: 8px 14px;
     letter-spacing: 3.5px;
     border-radius: 0;
     border: 1px solid rgb(194, 190, 190);
 }
-.boot button:hover{
-    border: 1px solid rgb(0, 0, 0);
-}
-.hight button{
-    font-size: 12px;
-    padding: 8px 14px;
-    letter-spacing: 3.5px;
-    border-radius: 0;
-    border: 1px solid rgb(194, 190, 190);
-}
-.hight button:hover{
+.boot a:hover{
     border: 1px solid rgb(0, 0, 0);
 }
 
 
+/* footer */
 .footer .container-fluid {
     line-height: normal;
 }
 .footer .container-fluid h2 {
     font-size: 12px;
+    font-weight: 350;
 }
 
+.footer .container-fluid .text{
+    padding-right: 5%;
+}
+.footer .container-fluid .text p {
+    margin: 15px 0px;
+}
+.footer-main h2{
+    font-size: 12px;
+    font-weight: 350;
+}
+.footer-main .text{
+    padding-right: 5%;
+}
+.form_email input{
+    border: none;
+  outline: none;
+}
+.email{
+    border-bottom: 2px solid black;
+}
+
+.footer-end h6{
+    font-size: 12px;
+    font-weight: 350;
+    letter-spacing: 1.5px;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .product-wrapper{
+        max-width: 430px;
+    }
+
+    .product-women h2{
+        font-size: 26px;
+        padding-left: 15px;
+    }
+    .product-men h2{
+        font-size: 26px;
+    }
+
+    .follow-intagram h2{
+        font-size: 26px;
+    }
+
+    .boot .navbar-light .container-fluid{
+        margin: 0;
+    }
 
 
+    
+}
 /*  */
 /*--------------------rgb(8, 8, 8)
         mobile: <740px 
@@ -394,11 +484,72 @@ header .header-top h5 {
     .nav-bar-logo img{
        width: 100%;
        height: auto;
-       
     }
     .header-main {
         padding: 0 17px !important;
     }
+
+    /* card */
+    
+    .product-container {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+        padding-bottom: 20px; 
+    }
+
+    .product-card {
+        flex: 0 0 auto;
+        width: calc(50% - 20px);
+        margin-right: 20px; 
+    }
+
+    .product-card:last-child {
+        margin-right: 0; 
+    }
+    .card-img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .card-img-wrapper img {
+        max-width: 100%; 
+        height: auto;
+    }
+    .card-text-new {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 5px;
+        z-index: 1;
+    }
+
+    /* boot shop */
+    .shop-boot .navbar-light .nav-item {
+        flex: 0 0 45%; /* Mỗi cột chiếm 50% width */
+        max-width: 50%; /* Mỗi cột chiếm 50% width */
+        padding: 0;
+    }
+    .shop-boot .navbar-light .nav-item p{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .shop-boot .container-fluid{
+        gap: 34px;
+    }
+
+    .highlight .text{
+        padding: 0px 17px;
+    }
+    .highlight .text h2{
+        font-size: 26px;
+    }
+
+    /* highlight */
+    /* .hight{
+        display: inline-flex;
+    } */
 }
 
 /*  */
@@ -432,5 +583,8 @@ header .header-top h5 {
     }
 
 
+    .shop-boot .container-fluid{
+        gap: 60px;
+    }
     
 }
