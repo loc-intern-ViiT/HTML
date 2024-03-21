@@ -41,6 +41,9 @@
 .px-40{
     padding: 0px 40px;
 }
+.pb-10{
+    padding-bottom: 20px;
+}
 .px-17{
     padding: 0px 17px;
 }
@@ -49,6 +52,9 @@
 }
 .pr-40{
     padding: 0px 40px 0px 0px;
+}
+.pb-75{
+    padding-bottom: 75px;
 }
 
 .p-5-15{
@@ -120,13 +126,17 @@ header .header-top h5 {
   header main main
 \*-----------------------------------*/
 .header-main {
+    position: fixed;
     width: 100%;
-    height: 59px;
+    height: 93px;
     padding: 20px 0px;
     font-size: 12px;
     line-height: 17px;
     display: flex;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
 }
+
 
 /*-----------------------------------*\
   header main left
@@ -386,6 +396,9 @@ header .header-top h5 {
     font-weight: 700;
     font-style: oblique;
 }
+.highlight .text {
+    border-bottom: 1px solid rgb(216, 205, 205);
+}
 
 /* boot */
 .boot a{
@@ -397,6 +410,9 @@ header .header-top h5 {
 }
 .boot a:hover{
     border: 1px solid rgb(0, 0, 0);
+}
+.boot .container-fluid{
+    margin: 0px;
 }
 
 
@@ -436,31 +452,64 @@ header .header-top h5 {
     letter-spacing: 1.5px;
 }
 
-@media only screen and (max-width: 450px) {
+.form_email {
+    padding-right: 0px;
+}
 
-    .product-wrapper{
-        max-width: 430px;
+.email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email input {
+    margin: 0;
+}
+
+/*  */
+/*-----------------------------------*\
+        tablet: <1024px 
+\*-----------------------------------*/
+/* */
+@media only screen and (max-width: 1025px) {
+    .container{
+        margin: 0px;
+    }
+    /* main left */
+    .nav-bar-left ul{
+        width: 100%;
+        height: 100%;
+    }
+    .nav-bar-left ul  li{
+        padding: 7.5px 7px;
+        width: auto;
+        text-align: center;
+        align-items: center;
     }
 
-    .product-women h2{
-        font-size: 26px;
-        padding-left: 15px;
+    /* main logo */
+    .nav-bar-logo {
+        margin-left: 5%; 
     }
-    .product-men h2{
-        font-size: 26px;
-    }
-
-    .follow-intagram h2{
-        font-size: 26px;
+    .boot{
+        margin-top: 40px;
     }
 
-    .boot .navbar-light .container-fluid{
+    .form_email {
+        padding-right: 0px;
+    }
+
+    .email {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .email input {
         margin: 0;
     }
-
-
-    
 }
+
 /*  */
 /*--------------------rgb(8, 8, 8)
         mobile: <740px 
@@ -526,17 +575,20 @@ header .header-top h5 {
 
     /* boot shop */
     .shop-boot .navbar-light .nav-item {
-        flex: 0 0 45%; /* Mỗi cột chiếm 50% width */
-        max-width: 50%; /* Mỗi cột chiếm 50% width */
+        flex: 0 0 45%; 
+        max-width: 50%; 
         padding: 0;
     }
     .shop-boot .navbar-light .nav-item p{
         font-size: 12px;
         padding: 5px 10px;
     }
-
+    .follow-intagram .container-fluid{
+        padding: 17px;
+    }
     .shop-boot .container-fluid{
-        gap: 34px;
+        gap: 20px;
+        padding: 7px;
     }
 
     .highlight .text{
@@ -547,44 +599,105 @@ header .header-top h5 {
     }
 
     /* highlight */
-    /* .hight{
-        display: inline-flex;
-    } */
+    .boot{
+        padding: 0px;
+    }
+
+    .form_email {
+        padding-right: 0px;
+    }
+
+    .email {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .email input {
+        margin: 0;
+    }
 }
 
 /*  */
 /*-----------------------------------*\
-        tablet: <1024px 
+        mobile: <430px 
 \*-----------------------------------*/
 /* */
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 450px) {
 
+    .product-wrapper{
+        max-width: 430px;
+    }
 
-    .container{
+    .product-women h2{
+        font-size: 26px;
+        padding-left: 15px;
+    }
+    .product-men h2{
+        font-size: 26px;
+    }
+
+    .follow-intagram h2{
+        font-size: 26px;
+    }
+
+    .follow-intagram .container-fluid{
+        padding: 17px;
+    }
+    .boot{
+        padding: 0px;
+    }
+    .boot .navbar-light .container-fluid{
+        margin: 0;
+    }
+    .shop-boot .container-fluid{
+        gap: 34px;
+        padding: 17px;
+    }
+    
+    .footer{
         margin: 0px;
     }
-    /* main left */
-    .nav-bar-left ul{
-        width: 100%;
-        height: 100%;
+    .footer .site-footer-pc{
+        display: none;
     }
-    .nav-bar-left ul  li{
-        padding: 7.5px 7px;
-        width: auto;
-        text-align: center;
+    .site-footer-mobile{
+        display: block;
+    }
+
+    .site-footer-mobile ul li{
+        font-size: 10px;
+        height: 67px;
+        padding-top: 11px;
+        border-top: 1px solid rgba(177, 177, 177, 0.589);
+    }
+    .site-footer-mobile ul li h6{
+        font-size: 10px;
+        letter-spacing: 3.5px;
+        font-weight: 400;
+        font-size: 11px;
+        padding: 15px 0px 15px 15px;
+    }
+    .site-footer-mobile ul li h6 i{
+        text-align: right;
+    }
+    .site-footer-mobile p , form{
+        display: none;
+    }
+
+    .site-title {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
-
-
-    /* main logo */
-    .nav-bar-logo {
-        margin-left: 5%; 
+    .site-title .title {
+        flex-grow: 1;
+        text-align: center;
     }
 
-
-    .shop-boot .container-fluid{
-        gap: 60px;
+    .site-title .icon {
+        text-align: right;
+        margin-top: -10px;
     }
-    
 }
