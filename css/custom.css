@@ -137,6 +137,38 @@ header .header-top h5 {
     background-color: rgb(255, 255, 255);
 }
 
+.show-menu {
+    display: block !important;
+  }
+
+.menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .show-menu {
+    display: block !important;
+  }
 
 /*-----------------------------------*\
   header main left
@@ -349,20 +381,6 @@ header .header-top h5 {
     overflow: hidden;
 }
 
-/* 
-
-
-.box-img1{
-    z-index: 1;
-}
-.box-img1 img{
-}
-.box-img2{
-    z-index: 0;
-    top: 0;
-    left: 50%; 
-    transform: translateX(-50%);
-} */
 
 .image-highlight{
     width: 100%;
@@ -508,6 +526,8 @@ header .header-top h5 {
     .email input {
         margin: 0;
     }
+
+    
 }
 
 /*  */

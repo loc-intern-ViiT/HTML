@@ -31,12 +31,20 @@
         <div class="header-main">
             <div class="container d-flex align-items-center justify-content-between">
                 <nav class="nav-bar-left navbar-light navbar-expand-sm justify-content-sm-start">
-                    <div class="nav-bar d-sm-none d-block">
+                    <div class="nav-bar d-sm-none d-block" id="hamburger-icon">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger"
                             viewBox="0 0 64 64" width="30" height="30">
                             <path d="M7 15h51M7 32h43M7 49h51" stroke="#000000" fill="none" stroke-width="2px" />
                         </svg>
+                    </div>
+
+                    <div class="menu-container d-none" id="menu-container">
+                        <ul class="menu">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                        </ul>
                     </div>
                     <div class="container-fluid d-md-flex d-none">
                         <ul class="navbar-nav nav_left_text">
@@ -420,7 +428,7 @@
             </section>
             <section class="highlight mt-75">
                 <div class="highlight">
-                    <!-- <div class="hight m-0 px-40 row d-flex my-5 align-items-center">
+                    <div class="hight m-0 px-40 row d-flex my-5 align-items-center">
                         <div class="col-7 image-highlight m-0 mx-85 d-flex position-relative">
                             <div class="box-img1 position-relative">
                                 <img src="https://shoethebear.com/cdn/shop/files/1200x1200_4_360x.jpg?v=1705940596"
@@ -437,7 +445,7 @@
                             <p class="hight-maxine fs-14 letter-spacing-05">Maxine Sandal Crystal</p>
                             <a type="button" class="btn btn-hight">See More</a>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="text px-20pt pb-75 text-center fs-14 letter-spacing-05">
                         <h2>WELCOME TO THE SHOE THE BEAR UNIVERSE</h2>
                         <p>We design footwear for modern people, with a focus on design and quality. Using traditional
@@ -664,7 +672,6 @@
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
-
     <script src="./js/script.js"></script>
 </body>
 
