@@ -58,7 +58,7 @@
 }
 
 .p-5-15{
-    padding: 2px 15px;
+    padding: 8px 15px;
 }
 .mb-50{
     margin-bottom: 50px;
@@ -173,8 +173,6 @@ header .header-top h5 {
 /*-----------------------------------*\
   header main left
 \*-----------------------------------*/
-.nav_left_icon{
-}
 
 .nav_left_text{
     display: block;
@@ -342,11 +340,21 @@ header .header-top h5 {
     overflow-x: auto;
     display: flex;
 }
+.product-wrapper .product-container {
+    width: 100%;
+}
+.product-wrapper .product-container .product-card{
+    width: 20%;
+}
 
 .product-card {
     box-sizing: border-box;
     min-width: 125px;
 }
+
+.star {
+    color: rgb(255, 255, 0);
+  }
 
 .follow-intagram .container-fluid{
     margin: 0;
@@ -362,7 +370,7 @@ header .header-top h5 {
 
 .card-text-shop{
     font-size: 17.6px;
-    font-weight: 350;
+    font-weight: 370;
     letter-spacing: 3.5px;
 }
 
@@ -372,26 +380,32 @@ header .header-top h5 {
 }
 
 
-
 /* highlight */
-
 .hight{
     width: 100%;
-    height: 566px;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
+}
+.image-highlight {
+    max-width: 100%;
 }
 
-
-.image-highlight{
+.box-image{
     width: 100%;
-    max-width: 700px;
+    height: auto;
 }
-.box-img1, .box-img2{
+.img1 , .img2{
     width: 50%;
 }
-.box-img1{
-    padding-top: 10%;
-    padding-left: 15%;
+
+.img1 img{
+    width: 100%;
+    height: 100%;
+    transform: translate(50px, 50px);
+}
+.img2 img{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -405,16 +419,16 @@ header .header-top h5 {
 .hight a:hover{
     border: 1px solid rgb(0, 0, 0);
 }
-.highlight .text h2{
+.highlight .text1 h2{
     font-size: 30px;
     font-weight: 370;
 }
-.highlight .text h6{
+.highlight .text1 h6{
     font-size: 14px;
     font-weight: 700;
     font-style: oblique;
 }
-.highlight .text {
+.highlight .text1 {
     border-bottom: 1px solid rgb(216, 205, 205);
 }
 
@@ -484,12 +498,25 @@ header .header-top h5 {
     margin: 0;
 }
 
+
+
 /*  */
 /*-----------------------------------*\
         tablet: <1024px 
 \*-----------------------------------*/
 /* */
 @media only screen and (max-width: 1025px) {
+    .header-main {
+        position: fixed;
+        width: 100%;
+        height: 93px;
+        padding: 20px 0px;
+        font-size: 12px;
+        line-height: 17px;
+        display: flex;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+    }
     .container{
         margin: 0px;
     }
@@ -527,7 +554,10 @@ header .header-top h5 {
         margin: 0;
     }
 
-    
+    /* highlight */
+    .hight{
+        margin-top: 75px;
+    }
 }
 
 /*  */
@@ -547,7 +577,10 @@ header .header-top h5 {
     .nav_left_icon i{
         font-size: 30px;
     }
-
+    .hub{
+        max-width: 100% !important;
+        flex-basis: calc(50% - 10px) !important;
+    }
     
     /* main logo */
     .nav-bar-logo img{
@@ -558,21 +591,21 @@ header .header-top h5 {
         padding: 0 17px !important;
     }
 
+    /* slider */
+  
+
     /* card */
-    
     .product-container {
         width: 100%;
         flex-wrap: nowrap;
         overflow-x: auto; 
         padding-bottom: 20px; 
     }
-
     .product-card {
         flex: 0 0 auto;
         width: calc(50% - 20px);
         margin-right: 20px; 
     }
-
     .product-card:last-child {
         margin-right: 0; 
     }
@@ -592,6 +625,9 @@ header .header-top h5 {
         padding: 5px;
         z-index: 1;
     }
+    .card-conten .star-rating{
+        flex-wrap: nowrap;
+    }
 
     /* boot shop */
     .shop-boot .navbar-light .nav-item {
@@ -604,25 +640,53 @@ header .header-top h5 {
         padding: 5px 10px;
     }
     .follow-intagram .container-fluid{
-        padding: 17px;
+        padding: 0 17px;
     }
     .shop-boot .container-fluid{
         gap: 20px;
         padding: 7px;
     }
 
+    
+
+    /* highlight */
+    .highlight{
+        margin-top: 40px;
+    }
+    .hight{
+        padding: 0px;
+    }
+    .box-image{
+        margin-right: 25px;
+    }
+    .hight .text{
+        padding-left: 40px;
+    }
+    .text-highlight {
+        padding: 100px 0px 0px 0px; 
+    }
+    .text-highlight .hight-name{
+        letter-spacing: 4px;
+    }
+    .highlight .text1 {
+        border-bottom: none;
+        padding: 20px;
+    }
     .highlight .text{
         padding: 0px 17px;
     }
-    .highlight .text h2{
+    .highlight .text1 h2{
         font-size: 26px;
     }
-
-    /* highlight */
+    .highlight .text1 h2{
+        font-size: 26px;
+    }
+    /* boot */
     .boot{
         padding: 0px;
     }
 
+    /* footer */
     .form_email {
         padding-right: 0px;
     }
@@ -636,6 +700,7 @@ header .header-top h5 {
     .email input {
         margin: 0;
     }
+    
 }
 
 /*  */
@@ -648,7 +713,6 @@ header .header-top h5 {
     .product-wrapper{
         max-width: 430px;
     }
-
     .product-women h2{
         font-size: 26px;
         padding-left: 15px;
@@ -656,13 +720,42 @@ header .header-top h5 {
     .product-men h2{
         font-size: 26px;
     }
-
+    
     .follow-intagram h2{
         font-size: 26px;
     }
+    /* card product */
+    .product-content{
+        margin: 40px 0;
+    }
+    .product-men{
+        margin: 40px 0;
+    }
+    .star-rating {
+        display: flex;
+        flex-wrap: nowrap;
+      }
 
-    .follow-intagram .container-fluid{
-        padding: 17px;
+      /* intagram */
+    .follow-intagram {
+        margin-top: 17px;
+        margin-bottom: 40px;
+    }
+   
+    .follow-intagram .container-fluid img{
+        width: 100%;
+        height: 100%;
+    }
+    .follow-intagram .product-title{
+        margin-bottom: 0;
+    }
+
+    /* boot */
+    .shop-boot{
+        margin-top: 0px;
+    }
+    .shop-boot .shop2{
+        margin-top: 0px;
     }
     .boot{
         padding: 0px;
@@ -671,10 +764,15 @@ header .header-top h5 {
         margin: 0;
     }
     .shop-boot .container-fluid{
-        gap: 34px;
-        padding: 17px;
+        gap: 20px;
+        padding: 0 17px;
     }
     
+    /* highlight */
+    .hight .text {
+        padding-left: 60px;
+    }
+    /* footer */
     .footer{
         margin: 0px;
     }
