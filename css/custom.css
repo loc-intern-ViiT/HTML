@@ -21,15 +21,29 @@
 .fs-24 {
     font-size: 24px;
 } 
-.fs-14 {
-    font-size: 14px;
-} 
-
+.fw-700{
+    font-weight: 700;
+}
+.fw-350{
+    font-weight: 350;
+}
+.fw-4{
+    font-weight: 400;
+}
+.fw-55{
+    font-weight: 550;
+}
 .mt-75{
     margin-top: 75px;
 }
 .mt-45{
     margin-top: 45px;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mb-30{
+    margin-bottom: 30px;
 }
 .ml-40{
     margin-left: 40px;
@@ -40,6 +54,9 @@
 
 .px-40{
     padding: 0px 40px;
+}
+.p-1-2{
+    padding: 8px 15px;
 }
 .pb-10{
     padding-bottom: 20px;
@@ -53,6 +70,12 @@
 .pr-40{
     padding: 0px 40px 0px 0px;
 }
+.pt-35{
+    padding-top: 35px;
+}
+.pl-60{
+    padding-left: 45px;
+}
 .pb-75{
     padding-bottom: 75px;
 }
@@ -63,9 +86,12 @@
 .mb-50{
     margin-bottom: 50px;
 }
+.mb-50{
+    margin-bottom: 50px;
+}
 
 .letter-spacing-2{
-    letter-spacing: 2px;
+    letter-spacing: 2.8px;
 }
 .letter-spacing-1{
     letter-spacing: 1.5px;
@@ -83,7 +109,9 @@
 .text-shop p{
     white-space: nowrap;
 }
-
+.font-style-oblique{
+    font-style: oblique;
+}
 
 .container{
     max-width: 1500px;
@@ -94,16 +122,13 @@
 .gap-15 {
     gap: 15px;
 }
+.gap-22 {
+    gap: 1px;
+}
 
 .link-icon {
     width: 28px;
     aspect-ratio: 1;
-}
-
-
-/* header */
-header{
-    justify-content: center;
 }
 
 /*-----------------------------------*\
@@ -115,28 +140,26 @@ header .header-top {
     padding: 10px;
 }
 
-header .header-top h5 {
+header .header-top p {
     font-size     : 11px;
     line-height   : 17px;
-    letter-spacing: 1.5px;
-    font-weight: 700;
 }
 
 /*-----------------------------------*\
   header main main
 \*-----------------------------------*/
 .header-main {
-    position: fixed;
-    width: 100%;
     height: 93px;
     padding: 20px 0px;
     font-size: 12px;
     line-height: 17px;
-    display: flex;
     z-index: 999;
     background-color: rgb(255, 255, 255);
 }
-
+.header-main .container{
+    max-width: 2048px;
+    padding: 0 40px;
+}
 .show-menu {
     display: block !important;
   }
@@ -154,7 +177,6 @@ header .header-top h5 {
   
   .menu {
     list-style: none;
-    padding: 0;
   }
   
   .menu li {
@@ -173,13 +195,8 @@ header .header-top h5 {
 /*-----------------------------------*\
   header main left
 \*-----------------------------------*/
-
-.nav_left_text{
-    display: block;
-}
-.header-main .nav-bar-left .container-fluid{
-    height:100%;
-    padding: 0;
+.nav-bar-left{
+    width: 35%;
 }
 
 .nav-bar-left ul{
@@ -189,17 +206,12 @@ header .header-top h5 {
 .nav-bar-left ul  li{
     padding: 7.5px 15px;
     width: auto;
-    text-align: center;
-    align-items: center;
 }
 .nav-bar-left ul  li a{
     white-space: nowrap;
     letter-spacing: 2.5px;
     line-height: 17px;
 }
-
-
-
 
 /*-----------------------------------*\
   header main logo
@@ -209,19 +221,25 @@ header .header-top h5 {
     width: 210px;
     height: 26px;
 }
-
-.nav-bar-logo img {
-    width: 100%;
-    height: 100%;
+.nav-bar-logo h1{
+    width: 30%;
+    width: 219px;
+    height: auto;
 }
-
 
 /*-----------------------------------*\
   header main right
 \*-----------------------------------*/
+.nav-bar-right{
+    width: 35%;
+}
+.nav-bar-right ul {
+    float: right;
+}
 
 .nav-bar-right ul  li a{
     font-size: 14px;
+
  }
 .dropdown {
     padding: 0px 5px;
@@ -234,13 +252,12 @@ header .header-top h5 {
 .dropdown-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 /*-----------------------------------*\
   slider
 \*-----------------------------------*/
-.slider{
+.slide{
     width: 100%;
     max-width: 100%;
     height: 750px;
@@ -253,7 +270,7 @@ header .header-top h5 {
     width: 100%;
     height: 100%;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.1); /* Sử dụng màu đen với độ mờ 0.5 */
+    background-color: rgba(0, 0, 0, 0.1); 
 }
 .overlay2 {
     position: absolute;
@@ -262,7 +279,7 @@ header .header-top h5 {
     width: 100%;
     height: 100%;
     padding: 2px;
-    background-color: rgba(0, 0, 0, 0.4); /* Sử dụng màu đen với độ mờ 0.5 */
+    background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
 }
 
@@ -283,14 +300,18 @@ header .header-top h5 {
     object-fit: cover;
     opacity: 1;
 }
-
-.item1 button{
+.text-item .name-slide{
+    font-size: 80px;
+}
+.item1 a{
+    border-radius: 0px;
     color: azure;
     background: none;
+    padding: 10px 15px;
     border: 1px solid rgb(245, 243, 243);
 }
-
-.item2 button{
+.item2 a{
+    border-radius: 0px;
     background-color: azure;
     color: black;
     border: none;
@@ -298,13 +319,9 @@ header .header-top h5 {
     font-size: 14px;
     padding: 15px;
 }
-.item3 h5{
-    font-size: 80px;
-    /* font-weight: 700; */
-}
-.item3 button{
+.item3 a{
+    border-radius: 0px;
     color: azure;
-    background: none;
     border: 1px solid rgb(245, 243, 243);
     letter-spacing: 3px;
     font-size: 14px;
@@ -316,19 +333,21 @@ header .header-top h5 {
 \*-----------------------------------*/
 
 .main-content {
-    display: flex;
-    justify-content: center; /* Canh giữa ngang */
-    align-items: center; /* Canh giữa dọc */
 }
 .container {
     max-width: 1500px;
-    /* margin: 0 auto; Canh giữa ngang */
 }
 /* title */
 
-.product-title{
+.product-men .product-title{
     width: 100%;
     align-items: center;
+    margin: 0px;
+}
+.product-women .product-title{
+    width: 100%;
+    align-items: center;
+    margin: 0px;
 }
 .product-title h2{
     width: 100%;
@@ -339,6 +358,7 @@ header .header-top h5 {
 .product-wrapper {
     overflow-x: auto;
     display: flex;
+    padding: 40px;
 }
 .product-wrapper .product-container {
     width: 100%;
@@ -408,7 +428,6 @@ header .header-top h5 {
     height: 100%;
 }
 
-
 .hight a{
     font-size: 12px;
     padding: 8px 14px;
@@ -419,34 +438,42 @@ header .header-top h5 {
 .hight a:hover{
     border: 1px solid rgb(0, 0, 0);
 }
-.highlight .text1 h2{
+.highlight .text-highlight h2{
     font-size: 30px;
     font-weight: 370;
 }
-.highlight .text1 h6{
-    font-size: 14px;
-    font-weight: 700;
-    font-style: oblique;
-}
-.highlight .text1 {
+
+.highlight .text-highlight {
     border-bottom: 1px solid rgb(216, 205, 205);
 }
 
+
 /* boot */
-.boot a{
+.boot-sale .container{
+    padding: 0;
+}
+
+.boot-sale a{
     font-size: 12px;
     padding: 8px 14px;
     letter-spacing: 3.5px;
     border-radius: 0;
     border: 1px solid rgb(194, 190, 190);
 }
-.boot a:hover{
+.boot-sale a:hover{
     border: 1px solid rgb(0, 0, 0);
 }
-.boot .container-fluid{
+.bootsale .container-fluid{
     margin: 0px;
 }
 
+.shop-boot-content .container-fluid{
+    width: 100%;
+    /* padding: 0px; */
+}
+.shop-boot-content .container-fluid article{
+    width: 33%;
+}
 
 /* footer */
 .footer .container-fluid {
@@ -472,7 +499,7 @@ header .header-top h5 {
 }
 .form_email input{
     border: none;
-  outline: none;
+    outline: none;
 }
 .email{
     border-bottom: 2px solid black;
@@ -489,9 +516,7 @@ header .header-top h5 {
 }
 
 .email {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .email input {
@@ -507,15 +532,7 @@ header .header-top h5 {
 /* */
 @media only screen and (max-width: 1025px) {
     .header-main {
-        position: fixed;
-        width: 100%;
-        height: 93px;
-        padding: 20px 0px;
-        font-size: 12px;
-        line-height: 17px;
-        display: flex;
-        z-index: 999;
-        background-color: rgb(255, 255, 255);
+       padding: 0;
     }
     .container{
         margin: 0px;
@@ -528,15 +545,13 @@ header .header-top h5 {
     .nav-bar-left ul  li{
         padding: 7.5px 7px;
         width: auto;
-        text-align: center;
-        align-items: center;
     }
 
     /* main logo */
     .nav-bar-logo {
         margin-left: 5%; 
     }
-    .boot{
+    .boot-sale{
         margin-top: 40px;
     }
 
@@ -545,7 +560,7 @@ header .header-top h5 {
     }
 
     .email {
-        display: flex;
+        /* display: flex; */
         justify-content: space-between;
         align-items: center;
     }
@@ -566,9 +581,9 @@ header .header-top h5 {
 \*-----------------------------------*/
 /* */
 @media only screen and (max-width: 768px) {
-    .nav-bar-logo {
-        width: calc(210px / 2);
-        height: calc(26px / 2);
+    .header-main{
+        padding: 0;
+        max-width: 768px;
     }
     .container{
         margin: 0px;
@@ -590,11 +605,21 @@ header .header-top h5 {
     .header-main {
         padding: 0 17px !important;
     }
+    .header-main .container {
+        padding: 0;
+    }
 
     /* slider */
   
 
+    .product-main{
+        max-width: 768px;
+    }
     /* card */
+    .product-wrapper{
+        padding: 0;
+    }
+
     .product-container {
         width: 100%;
         flex-wrap: nowrap;
@@ -630,12 +655,12 @@ header .header-top h5 {
     }
 
     /* boot shop */
-    .shop-boot .navbar-light .nav-item {
+    .shop-boot .shop-boot-content .nav-item {
         flex: 0 0 45%; 
         max-width: 50%; 
         padding: 0;
     }
-    .shop-boot .navbar-light .nav-item p{
+    .shop-boot .shop-boot-content .nav-item p{
         font-size: 12px;
         padding: 5px 10px;
     }
@@ -682,7 +707,7 @@ header .header-top h5 {
         font-size: 26px;
     }
     /* boot */
-    .boot{
+    .boot-sale{
         padding: 0px;
     }
 
@@ -709,9 +734,21 @@ header .header-top h5 {
 \*-----------------------------------*/
 /* */
 @media only screen and (max-width: 450px) {
-
+    .header-main{
+        height: calc(97px / 2);
+    }
+    .header-main .container{
+        padding: 0;
+    }
+    .nav-bar-logo h1{
+        width: 30%;
+        width: 110px;
+        height: auto;
+        text-align: center;
+    }
     .product-wrapper{
         max-width: 430px;
+        padding: 0;
     }
     .product-women h2{
         font-size: 26px;
@@ -725,7 +762,7 @@ header .header-top h5 {
         font-size: 26px;
     }
     /* card product */
-    .product-content{
+    .product-main{
         margin: 40px 0;
     }
     .product-men{
