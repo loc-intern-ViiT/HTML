@@ -724,11 +724,9 @@ header .header-top p {
     .highlight .text{
         padding: 0px 17px;
     }
-    .highlight .text1 h2{
+    .highlight .text h2{
         font-size: 26px;
-    }
-    .highlight .text1 h2{
-        font-size: 26px;
+        font-weight: 450;
     }
     /* boot */
     .boot-sale{
