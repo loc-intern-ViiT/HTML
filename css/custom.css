@@ -686,8 +686,6 @@ header .header-top p {
         padding: 7px;
     }
 
-    
-
     /* highlight */
     .highlight{
         margin-top: 40px;
@@ -698,11 +696,23 @@ header .header-top p {
     .box-image{
         margin-right: 25px;
     }
+    
+    .product-high-light .highlight{
+        padding: 0;
+        margin: 0;
+    }
+    .product-high-light .highlight .hight{
+        padding: 0 !important;
+    }
+
     .hight .text{
         padding-left: 40px;
     }
     .text-highlight {
         padding: 100px 0px 0px 0px; 
+    }
+    .text-highlight .text-hight{
+        padding: 0;
     }
     .text-highlight .hight-name{
         letter-spacing: 4px;
