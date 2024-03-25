@@ -469,10 +469,8 @@ header .header-top p {
 
 .shop-boot-content .container-fluid{
     width: 100%;
-    /* padding: 0px; */
-}
-.shop-boot-content .container-fluid article{
-    width: 33%;
+    padding: 0px;
+    margin-left: 5px;
 }
 
 /* footer */
