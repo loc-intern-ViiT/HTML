@@ -783,6 +783,13 @@ header .header-top p {
     .follow-intagram h2{
         font-size: 26px;
     }
+    /* slide */
+
+    .carousel-inner .text-item h2{
+        font-size: 30px;
+    }
+
+
     /* card product */
     .product-main{
         margin: 40px 0;
