@@ -36,23 +36,63 @@
                 <p class="text-white fw-700">30 DAYS RETURN FORM PACKAGE RECEIVED</p>
             </div>
         </div>
-        <!-- thanh menu  -->
+        
+        
+        <!-- thanh menu -->
         <div class="header-main d-flex position-fixed w-100">
+            <div class="side-bar d-none d-flex flex-column" id="sidebar-menu">
+                
+                <!-- icon close -->
+                <div class="close-btn d-flex justify-content-end">
+                    <i class="fas fa-times fs-5 p-2"></i>
+                </div>
+                <!-- menu -->
+                <ul class="menu p-3">
+                    <li class="item">
+                        <div class="d-flex justify-content-between">
+                            <a class="" href="#">WOMEN</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="women-dropdown">
+                            <a href="#" class="women-item"></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="d-flex justify-content-between">
+                            <a class="" href="#">MEN</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="women-dropdown bg-light p-2 d-none">
+                            <a href="#" class="women-item  d-block ">All product</a>
+                            <a href="#" class="women-item  d-block">Shop categories</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="d-flex justify-content-between">
+                            <a class="" href="#">NEW IN</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="women-dropdown">
+                            <a href="#" class="women-item"></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a class="" href="#">ABOUT SHOES THE BEAR</a>
+                    </li>
+                    <li class="item">
+                        <a class="" href="#">Log in</a>
+                    </li>
+                </ul>
+                
+            </div>
             <div class="container d-flex align-items-center justify-content-between">
                 <nav class="nav-bar-left navbar-light navbar-expand-sm justify-content-sm-start">
-                    <div class="nav-bar d-lg-none d-block" id="hamburger-icon">
+                    <div class="nav-bar d-lg-none d-block" id="menu-icon">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger"
                             viewBox="0 0 64 64" width="30" height="30">
                             <path d="M7 15h51M7 32h43M7 49h51" stroke="#000000" fill="none" stroke-width="2px" />
                         </svg>
-                    </div>
-                    <div class="sidebar-menu d-none" id="sidebar-menu">
-                        <ul class="menu p-0">
-                            <li><a href="#">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                            <li><a href="#">Item 3</a></li>
-                        </ul>
                     </div>
                     <!-- thanh menu trái -->
                     <div class="d-lg-flex d-none">
@@ -82,7 +122,7 @@
                     <div class="container-fluid px-0">
                         <ul class="navbar-nav d-flex align-items-center flex-row gap-15">
                             <li class="nav-item icon-item1 text-dark">
-                                <a class="nav-link py-0 d-md-flex d-none" href="#">
+                                <a class="nav-link py-0 d-lg-flex d-none" href="#">
                                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-user" viewBox="0 0 64 64" width="28" height="28"><path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z" stroke="#000000" fill="none" stroke-width="2px"/></svg>
                                 </a>
                             </li>
@@ -131,14 +171,6 @@
     <div class="slide">
         <div class="img-slider">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://shoethebear.com/cdn/shop/files/337_w_s_flashsale_graphics_0369_3024x.jpg?v=1710399192"
@@ -200,59 +232,145 @@
                 <!-- các sản phẩm nữ trong thanh cuộn -->
                 <main class="product-wrapper d-flex white-space-nowrap">
                     <div class="product-container d-flex px-17 overflow-x-auto">
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Iona_loafer_leather-Loafers-STB2070-987_BORDEUX_HIGH_SHINE_360x.jpg?v=1683616262"
-                                    alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                        <article class="product-card px-1" onmouseover="showHoverCard1(this)" onmouseout="hideHoverCard1(this)">
+                            <div class="card-1">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_GLAM_SANDAL-Sandals-STB2314-400_Champagne_360x.jpg?v=1687351338"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">Selena glam sandal - Champagne</p>
+                                    <p class="card-text">€79.95</p>
+                                </div>
                             </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">IONA LOAFER LEATHER - BORDEU HIGH SHINE</p>
-                                <p class="card-text">149.95$</p>
-                            </div>
-                        </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Thyra_Chain_Loafer_Leather-Loafers-STB2298-110_BLACK-1_220c29dd-80ba-4bc2-bada-36430b384984_360x.jpg?v=1695993227"
-                                    alt="SHOE THE BEAR WOMENS THYRA CHAIN LOAFER LEATHER - BLACK">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">THYRA CHAIN LOAFER LEATHER - BLACK</p>
-                                <p class="card-text">179.95$</p>
-                            </div>
-                        </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Thyra_Chain_Loafer_Suede-Loafers-STB2299-135_TAN-1_360x.jpg?v=1683617733"
-                                    alt="SHOE THE BEAR WOMENS THYRA CHAIN LOAFER SUEDE - TAN">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">THYRA CHAIN LOAFER SUEDE - TAN</p>
-                                <p class="card-text">149.95$</p>
+                            <div class="card-1-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Selena_glam_sandal-Sandals-STB2314-400_Champagne-1_360x.jpg?v=1710232998"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">36</p>
+                                    <p class="card-text">37</p>
+                                    <p class="card-text">38</p>
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                </div>
                             </div>
                         </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/STB-ERIKA_SADDLE_LOAFER_LEATHER-Loafers-STB2328-110_BLACK-1_360x.jpg?v=1684916753"
-                                    alt="SHOE THE BEAR WOMENS ERIKA SADDLE LOAFER LEATHER - BLACK">
+                        
+                        <article class="product-card px-1" onmouseover="showHoverCard2(this)" onmouseout="hideHoverCard2(this)">
+                            <div class="card-2">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_GLAM_SANDAL-Sandals-STB2314-832_Dusty_Blue_360x.jpg?v=1687351362"
+                                        alt="SHOE THE BEAR WOMENS THYRA CHAIN LOAFER LEATHER - BLACK">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">Selena glam sandal - Dusty Blue</p>
+                                    <p class="card-text">€79.95</p>
+                                </div>
                             </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">ERIKA SADDLE LOAFER LEATHER - BLACK</p>
-                                <p class="card-text">159.95$</p>
+                            <div class="card-2-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_GLAM_SANDAL-Sandals-STB2314-832_Dusty_Blue-1_360x.jpg?v=1687351364"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">36</p>
+                                    <p class="card-text">37</p>
+                                    <p class="card-text">38</p>
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                </div>
                             </div>
                         </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/STB-ERIKA_SADDLE_LOAFER_SUEDE-Loafers-STB2327-160_TAUPE-1_360x.jpg?v=1684916700"
-                                    alt="SHOE THE BEAR WOMENS ERIKA SADDLE LOAFER SUEDE - TAUPE">
+                        <article class="product-card px-1" onmouseover="showHoverCard3(this)" onmouseout="hideHoverCard3(this)">
+                            <div class="card-3">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_STRAP_SANDAL_L-Chelsea-STB2313-110_BLACK_360x.jpg?v=1687351262"
+                                        alt="SHOE THE BEAR WOMENS THYRA CHAIN LOAFER SUEDE - TAN">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">Selena strap sandal leather - BLACK</p>
+                                    <p class="card-text">€79.95</p>
+                                </div>
                             </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">ERIKA SADDLE LOAFER SUEDE - TAUPE</p>
-                                <p class="card-text">149.95$</p>
+                            <div class="card-3-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_STRAP_SANDAL_L-Chelsea-STB2313-110_BLACK-1_540x.jpg?v=1687351265"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">36</p>
+                                    <p class="card-text">37</p>
+                                    <p class="card-text">38</p>
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card px-1" onmouseover="showHoverCard4(this)" onmouseout="hideHoverCard4(this)">
+                            <div class="card-4">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_STRAP_SANDAL_L-Chelsea-STB2313-180_GREEN_360x.jpg?v=1687351285"
+                                        alt="SHOE THE BEAR WOMENS ERIKA SADDLE LOAFER LEATHER - BLACK">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">Selena strap sandal leather - GREEN</p>
+                                    <p class="card-text">€79.95</p>
+                                </div>
+                            </div>
+                            <div class="card-4-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_STRAP_SANDAL_L-Chelsea-STB2313-180_GREEN-1_540x.jpg?v=1687351288"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">36</p>
+                                    <p class="card-text">37</p>
+                                    <p class="card-text">38</p>
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card px-1" onmouseover="showHoverCard5(this)" onmouseout="hideHoverCard5(this)">
+                            <div class="card-5">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_STRAP_SANDAL_L-Chelsea-STB2313-832_Dusty_Blue_360x.jpg?v=1687351309"
+                                        alt="SHOE THE BEAR WOMENS ERIKA SADDLE LOAFER SUEDE - TAUPE">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">Selena strap sandal leather - Dusty Blue</p>
+                                    <p class="card-text">€79.95</p>
+                                </div>
+                            </div>
+                            <div class="card-5-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/STB-SELENA_STRAP_SANDAL_L-Chelsea-STB2313-832_Dusty_Blue-1_360x.jpg?v=1687351312"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">36</p>
+                                    <p class="card-text">37</p>
+                                    <p class="card-text">38</p>
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -266,73 +384,168 @@
                 <!-- các sản phẩm nam trong thanh cuộn -->
                 <main class="product-wrapper overflow-x-auto d-flex">
                     <div class="product-container d-flex px-17">
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Stellan_Lace_Up_Boot_Leather-Boots-STB2307-135_TAN-1_360x.jpg?v=1683617657"
-                                    alt="SHOE THE BEAR MENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">IONA LOAFER LEATHER - BORDEU HIGH SHINE</p>
-                                <div class="star-rating fs-20 flex-nowrap">
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
+                        <article class="product-card px-1" onmouseover="showHoverCard6(this)" onmouseout="hideHoverCard6(this)">
+                            <div class="card-6">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Stellan_Lace_Up_Boot_Leather-Boots-STB2307-135_TAN_540x.jpg?v=1683617654"
+                                        alt="SHOE THE BEAR MENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
                                 </div>
-                                <p class="card-text">149.95$</p>
-                            </div>
-                        </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Dev_chelsea_boot_waxed-Boots-STB1987-180_GREEN-1_360x.jpg?v=1683616072"
-                                    alt="SHOE THE BEAR MENS THYRA CHAIN LOAFER LEATHER - BLACK">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">THYRA CHAIN LOAFER LEATHER - BLACK</p>
-                                <p class="card-text">179.95$</p>
-                            </div>
-                        </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Rosco_Lace_Up_Boot_Leather-Boots-STB2289-135_TAN-1_360x.jpg?v=1683617532"
-                                    alt="SHOE THE BEAR MENS THYRA CHAIN LOAFER SUEDE - TAN">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">THYRA CHAIN LOAFER SUEDE - TAN</p>
-                                <p class="card-text">149.95$</p>
-                            </div>
-                        </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/files/Stellan_Lace_Up_Boot_Suede-Boots-STB2292-130_BROWN-2_360x.jpg?v=1693309775"
-                                    alt="SHOE THE BEAR MENS ERIKA SADDLE LOAFER LEATHER - BLACK">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">ERIKA SADDLE LOAFER LEATHER - BLACK</p>
-                                <p class="card-text">159.95$</p>
-                            </div>
-                        </article>
-                        <article class="product-card px-1">
-                            <div class="card-img-wrapper">
-                                <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
-                                <img src="https://shoethebear.com/cdn/shop/products/Dev_chelsea_boot_waxed-Boots-STB1987-130_BROWN-1_360x.jpg?v=1674035497"
-                                    alt="SHOE THE BEAR MENS ERIKA SADDLE LOAFER SUEDE - TAUPE">
-                            </div>
-                            <div class="card-content fs-12 text-center px-1 letter-spacing-1">
-                                <p class="card-text">ERIKA SADDLE LOAFER SUEDE - TAUPE</p>
-                                <div class="star-rating fs-20">
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">IONA LOAFER LEATHER - BORDEU HIGH SHINE</p>
+                                    <div class="star-rating fs-20 flex-nowrap">
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                    </div>
+                                    <p class="card-text">149.95$</p>
                                 </div>
-                                <p class="card-text">149.95$</p>
+                            </div>
+                            <div class="card-6-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Stellan_Lace_Up_Boot_Leather-Boots-STB2307-135_TAN-1_360x.jpg?v=1683617657"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                    <p class="card-text">42</p>
+                                    <p class="card-text">43</p>
+                                    <p class="card-text">44</p>
+                                    <p class="card-text">45</p>
+                                    <p class="card-text">46</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card px-1" onmouseover="showHoverCard7(this)" onmouseout="hideHoverCard7(this)">
+                            <div class="card-7">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Dev_chelsea_boot_waxed-Boots-STB1987-180_GREEN_360x.jpg?v=1683616070"
+                                        alt="SHOE THE BEAR MENS THYRA CHAIN LOAFER LEATHER - BLACK">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">THYRA CHAIN LOAFER LEATHER - BLACK</p>
+                                    <p class="card-text">179.95$</p>
+                                </div>
+                            </div>
+                            <div class="card-7-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Dev_chelsea_boot_waxed-Boots-STB1987-180_GREEN-1_360x.jpg?v=1683616072"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                    <p class="card-text">42</p>
+                                    <p class="card-text">43</p>
+                                    <p class="card-text">44</p>
+                                    <p class="card-text">45</p>
+                                    <p class="card-text">46</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card px-1" onmouseover="showHoverCard8(this)" onmouseout="hideHoverCard8(this)">
+                            <div class="card-8">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Rosco_Lace_Up_Boot_Leather-Boots-STB2289-135_TAN_360x.jpg?v=1683617529"
+                                        alt="SHOE THE BEAR MENS THYRA CHAIN LOAFER SUEDE - TAN">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">THYRA CHAIN LOAFER SUEDE - TAN</p>
+                                    <p class="card-text">149.95$</p>
+                                </div>
+                            </div>
+                            <div class="card-8-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Rosco_Lace_Up_Boot_Leather-Boots-STB2289-135_TAN-1_360x.jpg?v=1683617532"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                    <p class="card-text">42</p>
+                                    <p class="card-text">43</p>
+                                    <p class="card-text">44</p>
+                                    <p class="card-text">45</p>
+                                    <p class="card-text">46</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card px-1" onmouseover="showHoverCard9(this)" onmouseout="hideHoverCard9(this)">
+                            <div class="card-9">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Stellan_Lace_Up_Boot_Suede-Boots-STB2292-130_BROWN-1_360x.jpg?v=1693309775"
+                                        alt="SHOE THE BEAR MENS ERIKA SADDLE LOAFER LEATHER - BLACK">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">ERIKA SADDLE LOAFER LEATHER - BLACK</p>
+                                    <p class="card-text">159.95$</p>
+                                </div>
+                            </div>
+                            <div class="card-9-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/files/Stellan_Lace_Up_Boot_Suede-Boots-STB2292-130_BROWN-2_360x.jpg?v=1693309775"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                    <p class="card-text">42</p>
+                                    <p class="card-text">43</p>
+                                    <p class="card-text">44</p>
+                                    <p class="card-text">45</p>
+                                    <p class="card-text">46</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card px-1" onmouseover="showHoverCard10(this)" onmouseout="hideHoverCard10(this)">
+                            <div class="card-10">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/products/Dev_chelsea_boot_waxed-Boots-STB1987-130_BROWN_360x.jpg?v=1674035493"
+                                        alt="SHOE THE BEAR MENS ERIKA SADDLE LOAFER SUEDE - TAUPE">
+                                </div>
+                                <div class="card-content fs-12 text-center px-1 letter-spacing-1">
+                                    <p class="card-text">ERIKA SADDLE LOAFER SUEDE - TAUPE</p>
+                                    <div class="star-rating fs-20">
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                    </div>
+                                    <p class="card-text">149.95$</p>
+                                </div>
+                            </div>
+                            <div class="card-10-hover d-none">
+                                <div class="card-img-wrapper">
+                                    <p class="card-text-new p-1-2 text-white bg-black position-absolute fs-12">New</p>
+                                    <img src="https://shoethebear.com/cdn/shop/products/Dev_chelsea_boot_waxed-Boots-STB1987-130_BROWN-1_360x.jpg?v=1674035497"
+                                        alt="SHOE THE BEAR WOMENS IONA LOAFER LEATHER - BORDEU HIGH SHINE">
+                                </div>
+                                <div class="card-content d-flex fs-12 justify-content-center px-1 letter-spacing-1 gap-10">
+                                    <p class="card-text">39</p>
+                                    <p class="card-text">40</p>
+                                    <p class="card-text">41</p>
+                                    <p class="card-text">42</p>
+                                    <p class="card-text">43</p>
+                                    <p class="card-text">44</p>
+                                    <p class="card-text">45</p>
+                                    <p class="card-text">46</p>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -349,19 +562,25 @@
                             <img class="px-0 container-fluid object-fit-cover w-100 h-100"
                                 src="https://scontent.cdninstagram.com/v/t51.2885-15/434233554_1799566467121986_7263173873245959783_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=YKX5tAQ4LeQAX8FPSkR&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCj81XMarOz6QobhPm6vMjLxdmXO5F3mt4J_RwLlgnyug&oe=6605A733"
                                 alt="Instagram post with the caption: Stunning slingback heels are always a good idea 🌹...">
-                            <div class="overlay2"></div>
+                            <div class="overlay2 text-white d-flex align-items-center justify-content-center">
+                                <i class="fab fa-instagram"></i>
+                            </div>
                         </div>
                         <div class="col nav-item text-dark image ratio-1x1 ratio ">
                             <img class="px-0 container-fluid object-fit-cover w-100 h-100"
                                 src="https://scontent.cdninstagram.com/v/t51.2885-15/433266624_972175041136010_5480439538486132380_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=8eTVRzUVelUAX_3GXnU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDRmPp9PNRx-QovSHlOt27lz7HnxkLmyux7L2neyh7unw&oe=65FE4AE2"
                                 alt="Instagram post with the caption: Italian Elegance with a Sparkle ✨ Made in Italy with 100% LWG le...">
-                            <div class="overlay2"></div>
+                            <div class="overlay2 text-white d-flex align-items-center justify-content-center">
+                                <i class="fab fa-instagram"></i>
+                            </div>
                         </div>
                         <div class="col nav-item text-dark image ratio-1x1 ratio ">
                             <img class="px-0 container-fluid object-fit-cover w-100 h-100"
                                 src="https://scontent.cdninstagram.com/v/t51.2885-15/432247977_347550444292335_8239039044848744031_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=eBncb9SMja8AX9sRBIt&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDSa8hpoBXC2iI781yihYMFpy4mdY7CarAdbhXsB93lAw&oe=65FDCF67"
                                 alt="Instagram post with the caption: Meet the Hanna Buckle Heel, your versatile and chic wardrobe ess...">
-                            <div class="overlay2"></div>
+                            <div class="overlay2 text-white d-flex align-items-center justify-content-center">
+                                <i class="fab fa-instagram"></i>
+                            </div>
                         </div>
                     </div>
                 </main>
@@ -694,6 +913,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
     <script src="./js/script.js"></script>
+    
 </body>
 
 </html>
