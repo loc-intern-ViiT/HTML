@@ -880,6 +880,7 @@ header .header-top p {
     .nav-bar-logo h1{
         width: 30%;
         width: 110px;
+        margin-top: 8px;
         height: auto;
         text-align: center;
     }
@@ -899,7 +900,9 @@ header .header-top p {
         font-size: 26px;
     }
     /* slide */
-
+    .slide {
+        margin-top: 48px;
+    }
     
 
 
