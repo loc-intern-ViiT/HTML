@@ -872,7 +872,7 @@ header .header-top p {
 /* */
 @media only screen and (max-width: 450px) {
     .header-main{
-        height: calc(97px / 2);
+        height: calc(57px);
     }
     .header-main .container{
         padding: 0;
