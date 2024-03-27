@@ -987,15 +987,17 @@ header .header-top p {
         border-top: 1px solid rgba(177, 177, 177, 0.589);
     }
     .site-footer-mobile ul li h6{
+        margin: 0 !important;
         font-size: 10px;
         letter-spacing: 3.5px;
         font-weight: 400;
         font-size: 11px;
-        padding: 15px 0px 15px 15px;
+        padding-top: 15px;
+        padding-bottom: 5px;
     }
     .site-footer-mobile ul li p{
         margin: 0 !important;
-        padding: 0 5px;
+        padding: 5px 0px;
         font-size: 12px;
     }
     .site-footer-mobile ul li form{
@@ -1020,6 +1022,6 @@ header .header-top p {
 
     .site-title .icon {
         text-align: right;
-        margin-top: -10px;
+        margin-top: 10px;
     }
 }
