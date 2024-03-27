@@ -830,21 +830,23 @@
         <div class="site-footer-mobile d-md-none">
             <nav>
                 <ul class="list-unstyled text-center">
-                    <li>
+                    <li class="">
                         <div class="site-title">
                             <div class="title">
                                 <h6>SHOE THE BEAR</h6>
                             </div>
                             <div class="icon">
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-down" id="text-shoe-the-bear-icon"></i>
                             </div>
                         </div>
-                        <p>CUSTOMER SERVICE <br /> regarding products, orders, returns or other matters should be
-                            addressed
-                            to:</p>
-
-                        <p>E-mail: Online@shoethebear.com<br />Phone: +45 38 40 04 44<br />Monday-thursday: 9:00-
-                            15:00CET<br />Friday: 9:00 - 14:00CET<br />CVR: DK35240349</p>
+                        <div class="text-shoe-the-bear d-none" id="text-shoe-the-bear">
+                            <p>CUSTOMER SERVICE <br /> regarding products, orders, returns or other matters should be
+                                addressed
+                                to:</p>
+    
+                            <p>E-mail: Online@shoethebear.com<br />Phone: +45 38 40 04 44<br />Monday-thursday: 9:00-
+                                15:00CET<br />Friday: 9:00 - 14:00CET<br />CVR: DK35240349</p>
+                        </div>
                     </li>
                     <li>
                         <div class="site-title">
@@ -852,17 +854,19 @@
                                 <h6>INFOMATION</h6>
                             </div>
                             <div class="icon">
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-down" id="text-infomation-icon"></i>
                             </div>
                         </div>
-                        <p>About Shoe The Bear</p>
-                        <p>FAQ</p>
-                        <p>Size guide</p>
-                        <p>Shipping Policy</p>
-                        <p>Refund Policy</p>
-                        <p>Terms of Service</p>
-                        <p>Privacy Policy</p>
-                        <p>Cookies</p>
+                        <div class="text-infomation d-none" id="text-infomation">
+                            <p>About Shoe The Bear</p>
+                            <p>FAQ</p>
+                            <p>Size guide</p>
+                            <p>Shipping Policy</p>
+                            <p>Refund Policy</p>
+                            <p>Terms of Service</p>
+                            <p>Privacy Policy</p>
+                            <p>Cookies</p>
+                        </div>
                     </li>
                     <li>
                         <div class="site-title">
@@ -870,12 +874,14 @@
                                 <h6>CONTACT</h6>
                             </div>
                             <div class="icon">
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-down" id="text-contact-icon"></i>
                             </div>
                         </div>
-                        <p>Contact</p>
-                        <p>B2B - Retailer</p>
-                        <p>B2B login</p>
+                        <div class="text-contact d-none" id="text-contact">
+                            <p>Contact</p>
+                            <p>B2B - Retailer</p>
+                            <p>B2B login</p>
+                        </div>
                     </li>
                     <li>
                         <div class="site-title">
@@ -883,11 +889,13 @@
                                 <h6>SOCICALS</h6>
                             </div>
                             <div class="icon">
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-down" id="text-sosicals-icon"></i>
                             </div>
                         </div>
-                        <p>Instagram</p>
-                        <p>B2B login</p>
+                        <div class="text-intagram d-none" id="text-sosicals">
+                            <p>Instagram</p>
+                            <p>B2B login</p>   
+                        </div>
                     </li>
                     <li>
                         <div class="site-title">
@@ -895,26 +903,28 @@
                                 <h6>SIGN UP FOR OUR NEWSLETTER</h6>
                             </div>
                             <div class="icon">
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-down" id="text-sign-up-Icon"></i>
                             </div>
                         </div>
-                        <p>Sign up for our newsletter and you'll be first in line for special offers, competitions, news
-                            and
-                            offers.</p>
-                        <form class="form_email " action="">
-                            <div class="email input-group mb-3 d-flex">
-                                <input type="text" class="borderless-input" placeholder="Enter your email">
-                                <a class="" href="#"><svg xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                                        role="presentation" class="icon icon-email" viewBox="0 0 64 64" width="28"
-                                        height="28">
-                                        <path
-                                            d="M63 52H1V12h62zM1 12l25.68 24h9.72L63 12M21.82 31.68L1.56 51.16m60.78.78L41.27 31.68"
-                                            stroke="#000000" fill="none" stroke-width="2px" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </form>
+                        <div class="text-email d-none" id="text-sign-up">
+                            <p>Sign up for our newsletter and you'll be first in line for special offers, competitions, news
+                                and
+                                offers.</p>
+                            <form class="form_email " action="">
+                                <div class="email input-group mb-3 d-flex">
+                                    <input type="text" class="borderless-input" placeholder="Enter your email">
+                                    <a class="" href="#"><svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                            role="presentation" class="icon icon-email" viewBox="0 0 64 64" width="28"
+                                            height="28">
+                                            <path
+                                                d="M63 52H1V12h62zM1 12l25.68 24h9.72L63 12M21.82 31.68L1.56 51.16m60.78.78L41.27 31.68"
+                                                stroke="#000000" fill="none" stroke-width="2px" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
                     </li>
                 </ul>
             </nav>

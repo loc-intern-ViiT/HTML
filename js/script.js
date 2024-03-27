@@ -244,3 +244,86 @@ newInDropdownIcon.addEventListener('click', function() {
     isDropdownOpenNew = !isDropdownOpenNew;
 });
 
+
+// xử lý dropdown footer
+// text shoes the bear
+const textStb = document.getElementById('text-shoe-the-bear');
+const textStbIcon = document.getElementById('text-shoe-the-bear-icon');
+let isDropdownOpenSTB = false;
+
+textStbIcon.addEventListener('click', function() {
+    if (isDropdownOpenSTB) {
+        textStb.classList.add('d-none');
+        textStbIcon.classList.toggle('rotate180');
+    } else {
+        textStb.classList.remove('d-none');
+        textStbIcon.classList.toggle('rotate180');
+    }
+    isDropdownOpenSTB = !isDropdownOpenSTB;
+});
+
+// text infomation
+const textInfo = document.getElementById('text-infomation');
+const textInfoIcon = document.getElementById('text-infomation-icon');
+let isDropdownOpenInfo = false;
+
+textInfoIcon.addEventListener('click', function() {
+    if (isDropdownOpenInfo) {
+        textInfo.classList.add('d-none');
+        textInfoIcon.classList.toggle('rotate180');
+    } else {
+        textInfo.classList.remove('d-none');
+        textInfoIcon.classList.toggle('rotate180');
+    }
+    isDropdownOpenInfo = !isDropdownOpenInfo;
+});
+
+// text contact
+const textContact = document.getElementById('text-contact');
+const textContactIcon = document.getElementById('text-contact-icon');
+let isDropdownOpenContact = false;
+
+textContactIcon.addEventListener('click', function() {
+    if (isDropdownOpenContact) {
+        textContact.classList.add('d-none');
+        textContactIcon.classList.toggle('rotate180');
+    } else {
+        textContact.classList.remove('d-none');
+        textContactIcon.classList.toggle('rotate180');
+    }
+    isDropdownOpenContact = !isDropdownOpenContact;
+});
+
+// text sosicals
+const textSosicals = document.getElementById('text-sosicals');
+const textSosicalsIcon = document.getElementById('text-sosicals-icon');
+let isDropdownOpenSosicals = false;
+
+textSosicalsIcon.addEventListener('click', function() {
+    if (isDropdownOpenSosicals) {
+        textSosicals.classList.add('d-none');
+        textSosicalsIcon.classList.toggle('rotate180');
+    } else {
+        textSosicals.classList.remove('d-none');
+        textSosicalsIcon.classList.toggle('rotate180');
+    }
+    isDropdownOpenSosicals = !isDropdownOpenSosicals;
+});
+
+// text sign up email
+const textSignUp = document.getElementById('text-sign-up');
+const textSignUpIcon = document.getElementById('text-sign-up-Icon');
+let isDropdownOpenSignUp = false;
+
+textSignUpIcon.addEventListener('click', function() {
+    if (isDropdownOpenSignUp) {
+        textSignUp.classList.add('d-none');
+        textSignUpIcon.classList.toggle('rotate180');
+    } else {
+        textSignUp.classList.remove('d-none');
+        textSignUpIcon.classList.toggle('rotate180');
+    }
+    isDropdownOpenSignUp = !isDropdownOpenSignUp;
+});
+
+
