@@ -170,3 +170,77 @@ menuIcon.addEventListener('click', function() {
 closeBtn.addEventListener('click', function() {
     sidebarMenu.classList.add('d-none');
 });
+
+
+// xử lý sự kiện vuốt chuyển đổi slide cho desktop
+const textSlides = document.querySelectorAll('.text-slide-show');
+
+let currentSlideIndex = 0;
+
+function showNextSlide() {
+    textSlides[currentSlideIndex].classList.add('d-none'); //thêm d-none cho slide hiện tại
+    currentSlideIndex = (currentSlideIndex + 1) % textSlides.length; // tăng slide thêm 1 chia cho tổng số slide 
+    textSlides[currentSlideIndex].classList.remove('d-none'); // loại bỏ d-none cho slide vừa tăng
+}
+
+setInterval(showNextSlide, 3000); // Chuyển slide sau mỗi 3 giây (3000 milliseconds)
+
+// thay đổi dấu mũi tên khi bấm dropdown
+
+const iconDropdown = document.getElementById('icon-dropdown');
+const dropdownToggle = document.querySelector('.dropdown');
+
+dropdownToggle.addEventListener('click', function() {
+    iconDropdown.classList.toggle('rotate180');
+});
+
+// dropdown cho thanh sidebar 
+const womenDropdown = document.getElementById('women-dropdown');
+const womenDropdownIcon = document.getElementById('women-dropdown-icon');
+const menDropdown = document.getElementById('men-dropdown');
+const menDropdownIcon = document.getElementById('men-dropdown-icon');
+const newInDropdown = document.getElementById('new-in-dropdown');
+const newInDropdownIcon = document.getElementById('new-in-dropdown-icon');
+let isDropdownOpenWomen = false;
+let isDropdownOpenMen = false;
+let isDropdownOpenNew = false;
+
+//xử lý bấm vào icon women
+womenDropdownIcon.addEventListener('click', function() {
+    if (isDropdownOpenWomen) {
+        womenDropdown.classList.add('d-none');
+        womenDropdownIcon.classList.toggle('rotate180');
+    } else {
+        womenDropdown.classList.remove('d-none');
+        womenDropdownIcon.classList.toggle('rotate180');
+    }
+    
+    isDropdownOpenWomen = !isDropdownOpenWomen;
+});
+
+//xử lý bấm vào icon men
+menDropdownIcon.addEventListener('click', function() {
+    if (isDropdownOpenMen) {
+        menDropdown.classList.add('d-none');
+        menDropdownIcon.classList.toggle('rotate180');
+    } else {
+        menDropdown.classList.remove('d-none');
+        menDropdownIcon.classList.toggle('rotate180');
+    }
+    
+    isDropdownOpenMen = !isDropdownOpenMen;
+});
+
+//xử lý bấm vào icon new in
+newInDropdownIcon.addEventListener('click', function() {
+    if (isDropdownOpenNew) {
+        newInDropdown.classList.add('d-none');
+        newInDropdownIcon.classList.toggle('rotate180');
+    } else {
+        newInDropdown.classList.remove('d-none');
+        newInDropdownIcon.classList.toggle('rotate180');
+    }
+    
+    isDropdownOpenNew = !isDropdownOpenNew;
+});
+
